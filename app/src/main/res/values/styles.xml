@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Alnuwaq" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">@color/alnuwaq_brown</item>
+        <item name="android:statusBarColor">@color/alnuwaq_brown</item>
+        <item name="android:navigationBarColor">@color/alnuwaq_brown</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowBackground">@color/alnuwaq_beige</item>
+    </style>
+</resources>
