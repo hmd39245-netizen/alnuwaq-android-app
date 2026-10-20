@@ -1,19 +1,267 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/imperial_dark">
 
-    <WebView
-        android:id="@+id/webView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/alnuwaq_beige">
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@drawable/bg_imperial_header">
+
+            <TextView
+                android:id="@+id/headerTrack"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:gravity="center"
+                android:text="◎"
+                android:textSize="24sp"
+                android:textColor="@color/imperial_gold"
+                android:contentDescription="تتبع الطلب" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:id="@+id/headerHome"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="النواق"
+                    android:textStyle="bold"
+                    android:textSize="21sp"
+                    android:textColor="@color/imperial_cream" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ALNUWAQ  •  EST. 2026"
+                    android:textSize="8sp"
+                    android:letterSpacing="0.18"
+                    android:textColor="@color/imperial_gold_soft" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:max="100"
+            android:progressTint="@color/imperial_gold" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/alnuwaq_beige" />
+
+            <LinearLayout
+                android:id="@+id/errorPanel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="32dp"
+                android:visibility="gone"
+                android:background="@color/alnuwaq_beige">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="◆"
+                    android:textSize="34sp"
+                    android:textColor="@color/imperial_gold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="تعذّر الاتصال"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:textColor="@color/imperial_dark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="تحقق من الإنترنت ثم حاول مرة أخرى"
+                    android:textSize="14sp"
+                    android:textColor="@color/imperial_muted" />
+
+                <Button
+                    android:id="@+id/retryButton"
+                    android:layout_width="180dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="22dp"
+                    android:text="إعادة المحاولة"
+                    android:textStyle="bold"
+                    android:textColor="@color/imperial_cream"
+                    android:background="@drawable/bg_imperial_button" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/imperial_gold_dim" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@color/imperial_dark"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp">
+
+            <LinearLayout
+                android:id="@+id/navHome"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="4dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⌂" android:textSize="25sp" android:textColor="@color/imperial_gold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="الرئيسية" android:textSize="10sp" android:textColor="@color/imperial_cream" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/navCategories"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="4dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="▦" android:textSize="23sp" android:textColor="@color/imperial_gold_soft" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="الأقسام" android:textSize="10sp" android:textColor="@color/imperial_cream" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/navTrack"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.12"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="2dp">
+                <TextView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:gravity="center"
+                    android:text="◎"
+                    android:textSize="25sp"
+                    android:textColor="@color/imperial_dark"
+                    android:background="@drawable/bg_gold_circle" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="التتبع" android:textStyle="bold" android:textSize="9sp" android:textColor="@color/imperial_gold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/navCart"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="4dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="▣" android:textSize="23sp" android:textColor="@color/imperial_gold_soft" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="السلة" android:textSize="10sp" android:textColor="@color/imperial_cream" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/navRefresh"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="4dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="↻" android:textSize="24sp" android:textColor="@color/imperial_gold_soft" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="تحديث" android:textSize="10sp" android:textColor="@color/imperial_cream" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/splashOverlay"
         android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:layout_gravity="top"
-        android:max="100"
-        android:progressTint="@color/alnuwaq_brown" />
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_splash_imperial"
+        android:clickable="true"
+        android:focusable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="♛"
+                android:textSize="48sp"
+                android:textColor="@color/imperial_gold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="النواق"
+                android:textStyle="bold"
+                android:textSize="44sp"
+                android:textColor="@color/imperial_cream" />
+
+            <View
+                android:layout_width="96dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/imperial_gold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ALNUWAQ"
+                android:textSize="14sp"
+                android:letterSpacing="0.32"
+                android:textColor="@color/imperial_gold_soft" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="تفاصيل تُصنع لتبقى"
+                android:textSize="13sp"
+                android:textColor="@color/imperial_cream_muted" />
+        </LinearLayout>
+    </FrameLayout>
+
 </FrameLayout>
